@@ -1,0 +1,28 @@
+tree("Root")
+	fallback
+		tree("eatFruits")
+		tree("attackPlayer")
+		tree("randomPatrol")
+
+tree("eatFruits")
+	while isNearFruit
+		eatFruit
+
+tree("attackPlayer")
+	while isNearPlayer
+		repeat
+			sequence
+				checkNearFruit
+				attackPlayer
+				checkNearToAttack
+
+tree("randomPatrol")
+	while isPatrol
+		sequence
+			randomTravel
+			checkNearFruit
+			checkNearPlayer
+			
+		
+				
+					
